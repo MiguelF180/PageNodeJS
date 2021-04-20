@@ -1,0 +1,53 @@
+<%- include('template/header',{web:"inicio"}) -%> 
+<header>
+ 
+    <i class="fas fa-graduation-cap"></i>
+    <div class="texto">
+        <h1>Institucion educativa ambientalista de cartagena</h1>
+        <p>Estudia con nosotro y vive una de las mejores momentos con nosotros.</p>
+    </div>
+</header>
+
+<section class='contslider'>
+    <ul class='promo'>
+    
+        <% info.forEach(function(i){%>
+            <li><i class='fas <%=i.logo%>' ></i>
+                <div class="text">
+                    <h2><%= i.subTitle %> </h2>
+                    <p> <%= i.p %>  </p>
+                </div>
+            </li>
+        <% }) %> 
+
+    </ul>
+</section>
+
+<section class='segunda'>
+    <div class="principal">
+    <% paletas.forEach((i)=>{%>
+    
+            <div class="privi">
+              <i class="fas <%= i.logo%>"></i>
+              <h3><%=i.titlePaletas%></h3>
+            </div>
+            
+            <%  })%>
+        </div>
+   
+</section>
+
+    <section class="mv">
+        <div class="vision">
+         <h1>Nuestra Vision</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vitae. Harum tempora modi veniam quis quod placeat dolor ex illum nulla quae. Sit reiciendis, quaerat autem praesentium explicabo natus, minima.</p>
+         <i class="fas fa-eye"></i>
+        </div>
+        <div class="mision">
+         <h1>Nuestra Mision</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vitae. Harum tempora modi veniam quis quod placeat dolor ex illum nulla quae. Sit reiciendis, quaerat autem praesentium explicabo natus, minima.</p>
+         <i class="fas fa-check-square"></i>
+        </div>
+      </section>
+
+<%- include('template/footer') -%> 
